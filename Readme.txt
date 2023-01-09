@@ -4,3 +4,10 @@ contatti:
 email:vaccaroandrea1227@gmail.com
 instagram:@andrea.vmc
 github:@andreaVMC
+
+readme relativo all' esercizio "pista di pattinaggio" (anno 2022-2023) e relative classi e librire.
+il programma usufruisce di diverse classi per funzionare, ed il main si occupa di passare e gestire le funzioni da una classe all' altra.
+la classe "pistaDiPattinaggio" si occupa di tenere tracciabilita dei posti in pista e dei costi di manutenzione, la classe pattini invecce si occupa di controllare la disponibilità dei pattini per un intero gruppo, gestirne le manutenzioni (e ralitivi costi) e la restituzione dei medesimi pattini all' uscita di un gruppo dal turno, per ultima la classe "gruppi" che si occupa della creazione di un gruppo casuale, della sua tracciabilita (sia nel caso
+si trovi in turno o in attesa), della registrazione di ora di ingresso ed id del gruppo; mentre l' unico compito solo destinato al main è quello di tener il conto dell' orario e di chiamare e passare dati ai metodi delle vari classe.
+Poi abbiamo la libreria GUI.h, che attraverso delle funzioni scrive unn file HTML (quello che viene aperto automaticamente dal main) dove verra rappresentato graficamente l' andamento della pista di pattinaggio.
+Il "sito" della GUI è programmato attraverso uno script javascript per autoaggiornarsi ogni 5 secondi (ovvero lo stesso tempo che necessita il programma per passare da un minuto all' altro del tempo) cosi da fornire un aggiornamento in tempo reale

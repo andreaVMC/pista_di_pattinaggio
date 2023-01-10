@@ -1,23 +1,26 @@
+/*libreria per interfaccia grafica*/
 #include <fstream>
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include "gruppi.cpp"
 using namespace std;
-ofstream file;
+ofstream file; //creo il file globale su cui scrivero i vari dati
 
-void inizializzaPagina(){	
-	file.open("index.html",ios::out);
+void inizializzaPagina(){ //funzione che serve per inizializzare la pagina ed aprire i vari tag
+	file.open("index.txt",ios::out);
 	file<<"<!DOCTYPE html>";
 	file<<"<html><head><title>Pista Di Pattinaggio Andrea Vaccaro</title><link rel=\"stylesheet\" href=\"style.css\"><script src=\"js.js\"></script></head>";
-    file<<"<body background=\"IMG/neve.png\" onload=\"aggiorna()\"><div class=\"container\"><div class=\"row-1\"><div class=\"logo\"><img src=\"IMG/logo-text.png\" class=\"logo-img\"></div><div class=\"evento\">";
+    file<<"<body onload=\"aggiorna()\"><div class=\"container\"><div class=\"row-1\"><div class=\"logo\"><img src=\"IMG/logo-text.png\" class=\"logo-img\"></div><div class=\"evento\">";
 }
 
-void inserisciEvento(string s){
+void inserisciEvento(string s){ //funzione che inserisce l' evento del tempo corrente
 	file<<"\n<div class=\"events\">";
 	file<<s;
 	file<<"</div></div>";
 }
 
-void inserisciOra(int ora){
+void inserisciOra(int ora){ //metodo che va a scrivere sulla GUI l' ora corrente
 	int h=0,m=0;
 	int i;
 	for(i=0;i<ora;i++){
@@ -44,7 +47,7 @@ void inserisciOra(int ora){
 	file<<"</div></div></div>";
 }
 
-void inserisciAttesa(int totGruppi,gruppi grup){
+void inserisciAttesa(int totGruppi,gruppi grup){ //metodo che inserisce la lista d' attesa nella GUI
 	file<<"<div class=\"row-2\"><div class=\"row-2-1\"><div class=\"attesa\">";
     file<<"<table class=\"table-attesa\"><tr><td colspan=\"2\" class=\"titolo-attesa\">Coda d' attesa</td></tr>";
     int i,j;
@@ -65,7 +68,7 @@ void inserisciAttesa(int totGruppi,gruppi grup){
 	file<<"</table></div>";
 }
 
-void inserisciCosti(int fatturato,float cmanutenzione,float utile){
+void inserisciCosti(int fatturato,float cmanutenzione,float utile){ //metodo che scrive i vari costi e ricavi sulla GUI
 	file<<"<div class=\"fatturato\"><div class=\"testo-fatturato\">Fatturato: ";
 	file<<fatturato<<"&euro;</div></div>";
 	file<<"<div class=\"costo-manutenzione\"><div class=\"testo-costo-manutenzione\">Spese: ";
@@ -83,7 +86,7 @@ void inserisciCosti(int fatturato,float cmanutenzione,float utile){
 	file<<"</div>";
 }
 
-void stampaPista(gruppi grup){
+void stampaPista(gruppi grup){ //metodo che disegna graficamente lo stato della pista
 	int i,j,x=0,y=0,ctr=0;
 	file<<"<div class=\"pista\"><table class=\"table-pista\"><tr><td class=\"titolo-pista\" colspan=\"10\">Pista di pattinaggio</td></tr>";
 	for(i=0;i<10;i++){
@@ -105,7 +108,7 @@ void stampaPista(gruppi grup){
 	file<<"</table></div>";
 }
 
-void stampaStatoPattini(pattini pat){
+void stampaStatoPattini(pattini pat){ //metodo che stampa lo stato dei vari patttini graficamente 
 	int i,j;
 	file<<"<div class=\"pattini\"><table class=\"table-pattini\"><tr><td class=\"titolo-pattini\">Pattini</td></tr>";
 	for(i=0;i<20;i++){
@@ -125,7 +128,19 @@ void stampaStatoPattini(pattini pat){
 	file<<"</table></div>";
 }
 
-void chiudiPagina(){
-	file<<"</div></div></body></html>";
+void chiudiPagina(){ //metodo che si occupa di chiudere l' interfaccia grafica e di salvarla
+	file<<"</div></div><div class=\"credits\" onclick=\"credits()\">by Andrea Vaccaro</div></body></html>";
 	file.close();
+}
+
+void creagui(){
+	char c;
+	FILE *in=fopen("index.txt","r");
+	FILE *out=fopen("index.html","w");
+	while(!feof(in)){
+		fscanf(in,"%c",&c);
+		fprintf(out,"%c",c);
+	}
+	fclose(in);
+	fclose(out);
 }

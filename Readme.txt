@@ -1,10 +1,4 @@
-questo è un programma creato da Andrea Vaccaro (github: @andreaVMC), che gestisce in maniera autonoma una pista di pattinaggio all' infinito, attraverso delle casualita random; autonomamente scrive una pagina html collegata ad un css, cosi da poter fornire una visualizzazione dei dati grafica, ed ad un codice javascript che aggiorna la pagina periodicamente in maniera che i dati possano essere visualizzati quasi in tempo reale.
-
-contatti:
-email:vaccaroandrea1227@gmail.com
-instagram:@andrea.vmc
-github:@andreaVMC
-
+Andrea Vaccaro
 readme relativo all' esercizio "pista di pattinaggio" (anno 2022-2023) e relative classi e librire.
 il programma usufruisce di diverse classi per funzionare, ed il main si occupa di passare e gestire le funzioni da una classe all' altra.
 la classe "pistaDiPattinaggio" si occupa di tenere tracciabilita dei posti in pista e dei costi di manutenzione, la classe pattini invecce si occupa di controllare la disponibilità dei pattini per un intero gruppo, gestirne le manutenzioni (e ralitivi costi) e la restituzione dei medesimi pattini all' uscita di un gruppo dal turno, per ultima la classe "gruppi" che si occupa della creazione di un gruppo casuale, della sua tracciabilita (sia nel caso

@@ -26,7 +26,7 @@ body{
     display: grid;
     width: 95%;
     margin: 1% 2.5% 0% 2.5%;
-    height: 95vh;
+    height: 90vh;
     grid-template-rows: 20% 80%;
     gap: 0px; /*gap serve a distanziare le varie celle*/
 }
@@ -89,8 +89,7 @@ body{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     background: var(--contrasto-sfondo);
-    box-shadow: inset 8px 8px 17px #2f074d,
-                inset -8px -8px 17px #670fa9;
+    box-shadow: inset 8px 8px 17px #2f074d,                    inset -8px -8px 17px #670fa9;
 }
 
 .events{
@@ -112,8 +111,7 @@ body{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     background: var(--contrasto-sfondo);
-    box-shadow: inset 8px 8px 27px #2f074d,
-                inset -8px -8px 27px #670fa9;
+    box-shadow: inset 8px 8px 27px #2f074d,                inset -8px -8px 27px #670fa9;
 }
 .orario{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -175,8 +173,7 @@ body{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     background: var(--contrasto-sfondo);
-    box-shadow: inset 8px 8px 17px #2f074d,
-                inset -8px -8px 17px #670fa9;
+    box-shadow: inset 8px 8px 17px #2f074d,                inset -8px -8px 17px #670fa9;
 }
 
 .costo-manutenzione{
@@ -192,8 +189,7 @@ body{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     background: var(--contrasto-sfondo);
-    box-shadow: inset 8px 8px 17px #2f074d,
-                inset -8px -8px 17px #670fa9;
+    box-shadow: inset 8px 8px 17px #2f074d,                inset -8px -8px 17px #670fa9;
 }
 
 .utile{
@@ -209,8 +205,7 @@ body{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     background: var(--contrasto-sfondo);
-    box-shadow: inset 8px 8px 17px #2f074d,
-                inset -8px -8px 17px #670fa9;
+    box-shadow: inset 8px 8px 17px #2f074d,                inset -8px -8px 17px #670fa9;
 }
 
 .testo-fatturato, .testo-costo-manutenzione, .testo-utile{
@@ -340,4 +335,16 @@ body{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+.credits{
+    color: var(--azure);
+    padding:0% 0% 0% 3%;
+    font-size: 150%;
+    transition-duration: 0.2s;
+}
+
+.credits:hover{
+    cursor: pointer;
+    color: var(--text);
 }

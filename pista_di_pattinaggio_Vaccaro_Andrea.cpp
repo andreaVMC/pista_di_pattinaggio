@@ -89,6 +89,7 @@ int main(){
 		stampaStatoPattini(pat); //stampa lo stato dei pattini sull' interfaccia
 		chiudiPagina(); //chiude e salva le modifiche all' interfaccia
 		ora++; //aumento l' ora
+		creagui();
 		Sleep(5100); //aspetta un intervallo di tempo prima di ripetere il ciclo
 	}
 	return 0;
